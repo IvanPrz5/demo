@@ -19,7 +19,7 @@ import lombok.Setter;
 @Table(name="claveUnidad")
 public class c_ClaveUnidad {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.AUTO)
     private String cClaveUnidad;
     @Column
     private String nombre;

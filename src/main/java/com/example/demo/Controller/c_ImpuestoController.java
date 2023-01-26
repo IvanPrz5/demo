@@ -17,12 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.Entity.c_Impuesto;
 import com.example.demo.Repository.c_ImpuestoRepository;
-import com.example.demo.Service.c_ImpuestoService;
 
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST })
+@CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PUT, })
 @RestController
 @RequestMapping("/Impuesto")
 public class c_ImpuestoController {

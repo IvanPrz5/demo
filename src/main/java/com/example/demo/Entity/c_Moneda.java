@@ -19,7 +19,7 @@ import lombok.Setter;
 @Table(name="moneda")
 public class c_Moneda {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     @Column
     private String descripcion;

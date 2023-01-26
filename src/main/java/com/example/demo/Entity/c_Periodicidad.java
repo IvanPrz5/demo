@@ -19,7 +19,7 @@ import lombok.Setter;
 @Table(name="periodicidad")
 public class c_Periodicidad {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     @Column
     private String descripcion;

@@ -19,7 +19,7 @@ import lombok.Setter;
 @Table(name="objetoImp")
 public class c_ObjetoImp {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     @Column
     private String descripcion;

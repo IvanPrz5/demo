@@ -24,7 +24,7 @@ import lombok.Setter;
 @Table(name="codigo_postal")
 public class c_CodigoPostal {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.AUTO)
     private String cCodigoPostal;
     @Column
     private Boolean status;

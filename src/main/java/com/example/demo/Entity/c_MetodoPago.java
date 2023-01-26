@@ -19,7 +19,6 @@ import lombok.Setter;
 @Table(name="metodoPago")
 public class c_MetodoPago {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     @Column
     private String descripcion;

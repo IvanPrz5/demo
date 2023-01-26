@@ -24,7 +24,7 @@ import lombok.Setter;
 @Table(name="localidad")
 public class c_Localidad {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String idLocalidad;
     @Column
     private String cLocalidad;

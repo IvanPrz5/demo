@@ -19,7 +19,7 @@ import lombok.Setter;
 @Table(name="formaPago")
 public class c_FormaPago {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.AUTO)
     private String cFormaPago;
     @Column
     private String descripcion;

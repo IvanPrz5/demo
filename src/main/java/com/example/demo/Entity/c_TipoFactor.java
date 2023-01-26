@@ -19,7 +19,7 @@ import lombok.Setter;
 @Table(name="tipoFactor")
 public class c_TipoFactor {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.AUTO)
     private String cTipoFactor;
     @Column
     private Boolean status;

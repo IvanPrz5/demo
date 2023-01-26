@@ -18,7 +18,7 @@ import lombok.Setter;
 @Table(name="tipoDeComprobante")
 public class c_TipoDeComprobante {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     @Column
     private String descripcion;

@@ -55,11 +55,11 @@ public class c_AduanaController {
         }
     }
 
-    @PostMapping("/{caduana}")
+    @PutMapping("/{caduana}")
     public ResponseEntity<c_Aduana> updatingRegistro(@PathVariable("caduana") String idAduana, @RequestBody c_Aduana cAduana){
         Optional<c_Aduana> aduanaData = aduanaRepository.findById(idAduana);
-        return new ResponseEntity<>(cAduana, HttpStatus.OK);
-        /* if(aduanaData.isPresent()){
+        
+        if(aduanaData.isPresent()){
             c_Aduana aduana =  aduanaData.get();
             aduana.setId(cAduana.getId());
             aduana.setDescripcion(cAduana.getDescripcion());
@@ -67,6 +67,6 @@ public class c_AduanaController {
             return new ResponseEntity<>(aduanaRepository.save(aduana), HttpStatus.OK);
         }else{
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-        } */
+        }
     }
 }

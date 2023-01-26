@@ -19,7 +19,7 @@ import lombok.Setter;
 @Table(name="tipoRelacion")
 public class c_TipoRelacion {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     @Column
     private String descripcion;

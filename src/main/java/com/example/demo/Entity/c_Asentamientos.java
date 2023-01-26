@@ -22,7 +22,7 @@ import lombok.Setter;
 @Table(name="asentamientos")
 public class c_Asentamientos {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String idAsentamiento;
     @Column
     private String cAsentamiento;

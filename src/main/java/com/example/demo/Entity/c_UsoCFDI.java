@@ -19,7 +19,7 @@ import lombok.Setter;
 @Table(name="usoCFDI")
 public class c_UsoCFDI {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.AUTO)
     private String cUsoCFDI;
     @Column
     private String descripcion;

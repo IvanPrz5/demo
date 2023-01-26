@@ -24,7 +24,7 @@ import java.util.List;
 @Table(name="estado")
 public class c_Estado {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.AUTO)
     private String cEstado;
     @Column
     private String nombreEstado;

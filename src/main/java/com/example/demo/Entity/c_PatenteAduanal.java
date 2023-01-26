@@ -19,7 +19,7 @@ import lombok.Setter;
 @Table(name="patenteAduanal")
 public class c_PatenteAduanal {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.AUTO)
     private String cPatenteAduanal;
     @Column
     private Boolean status;

@@ -24,7 +24,7 @@ import lombok.Setter;
 @Table(name="municipio")
 public class c_Municipio {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.AUTO)
     private String idMunicipio;
     @Column
     private String cMunicipio;
