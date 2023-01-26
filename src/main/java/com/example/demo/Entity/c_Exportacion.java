@@ -19,8 +19,8 @@ import lombok.Setter;
 @Table(name="exportacion")
 public class c_Exportacion {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private String cExportacion;
+    // @GeneratedValue(strategy = GenerationType.AUTO)
+    private String id;
     @Column
     private String descripcion;
     @Column

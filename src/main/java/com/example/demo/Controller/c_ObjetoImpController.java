@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.Entity.c_MetodoPago;
 import com.example.demo.Entity.c_ObjetoImp;
-import com.example.demo.Repository.c_MetodoPagoRepository;
 import com.example.demo.Repository.c_ObjetoImpRepostory;
 
 import java.util.List;

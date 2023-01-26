@@ -1,11 +1,15 @@
 package com.example.demo.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -35,8 +39,40 @@ public class c_ImpuestoController {
         return impuestoRepository.findById(cimpuesto);
     }
 
-    @PostMapping("/algo")
-    public c_Impuesto create(@RequestBody c_Impuesto algo){
-        return impuestoRepository.save(algo);
+    @PostMapping
+    public ResponseEntity<c_Impuesto> createRegistro(@RequestBody c_Impuesto var) {
+        try {
+            c_Impuesto impuesto = impuestoRepository.save(var);
+            return new ResponseEntity<>(impuesto, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @DeleteMapping("/{cimpuesto}")
+    public ResponseEntity<HttpStatus> deleteRegistro(@PathVariable("cimpuesto") String cimpuesto) {
+        try {
+            impuestoRepository.deleteById(cimpuesto);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @PutMapping("/{cimpuesto}")
+    public ResponseEntity<c_Impuesto> updatingRegistro(@PathVariable("cimpuesto") String idImpuesto, @RequestBody c_Impuesto cImpuesto){
+        Optional<c_Impuesto> impuestoData = impuestoRepository.findById(idImpuesto);
+        
+        if(impuestoData.isPresent()){
+            c_Impuesto impuesto =  impuestoData.get();
+            impuesto.setDescripcion(cImpuesto.getDescripcion());
+            impuesto.setRetencion(cImpuesto.getRetencion());
+            impuesto.setTraslado(cImpuesto.getTraslado());
+            impuesto.setLocalFederal(cImpuesto.getLocalFederal());
+            impuesto.setStatus(cImpuesto.getStatus());
+            return new ResponseEntity<>(impuestoRepository.save(impuesto), HttpStatus.OK);
+        }else{
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
     }
 }

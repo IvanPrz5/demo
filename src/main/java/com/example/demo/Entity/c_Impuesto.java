@@ -6,6 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,7 +22,9 @@ import lombok.Setter;
 @Table(name="impuesto")
 public class c_Impuesto {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    //@GeneratedValue(strategy = GenerationType.AUTO)
+    //@GeneratedValue(generator="system-uuid")
+    //@GenericGenerator(name="system-uuid", strategy = "uuid")
     private String cImpuesto;
     @Column
     private String descripcion;

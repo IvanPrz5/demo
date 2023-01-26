@@ -15,7 +15,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST })
 @RestController
-@RequestMapping("/TipoController")
+@RequestMapping("/TipoRelacion")
 public class c_TipoRelacionController {
     @Autowired
     private c_TipoRelacionRepository tiporelacionRepository;

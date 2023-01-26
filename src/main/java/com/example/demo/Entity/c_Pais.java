@@ -23,7 +23,7 @@ import lombok.Setter;
 public class c_Pais {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String cPais;
+    private String id;
     @Column
     private String descripcion;
     @Column

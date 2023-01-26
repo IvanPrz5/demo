@@ -20,7 +20,7 @@ import lombok.Setter;
 public class c_MetodoPago {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String cMetodoPago;
+    private String id;
     @Column
     private String descripcion;
     @Column

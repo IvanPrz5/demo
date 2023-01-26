@@ -20,7 +20,7 @@ import lombok.Setter;
 public class c_Moneda {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String cMoneda;
+    private String id;
     @Column
     private String descripcion;
     @Column
