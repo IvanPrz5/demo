@@ -58,7 +58,7 @@ public class c_ClaveUnidadController {
         
         if(claveunidadData.isPresent()){
             c_ClaveUnidad claveUnidad = claveunidadData.get();
-            claveUnidad.setCClaveUnidad(cClaveUni.getCClaveUnidad());
+            claveUnidad.setId(cClaveUni.getId());
             claveUnidad.setNombre(cClaveUni.getNombre());
             claveUnidad.setDescripcion(cClaveUni.getDescripcion());
             claveUnidad.setSimbolo(cClaveUni.getSimbolo());

@@ -20,7 +20,7 @@ import lombok.Setter;
 public class c_ClaveUnidad {
     @Id
     // @GeneratedValue(strategy = GenerationType.AUTO)
-    private String cClaveUnidad;
+    private String id;
     @Column
     private String nombre;
     @Column(length = 600)

@@ -58,7 +58,7 @@ public class c_UsoCFDIController {
         
         if(usocfdiData.isPresent()){
             c_UsoCFDI usoCFDI = usocfdiData.get();
-            usoCFDI.setCUsoCFDI(cUsoCFDI.getCUsoCFDI());
+            usoCFDI.setId(cUsoCFDI.getId());
             usoCFDI.setDescripcion(cUsoCFDI.getDescripcion());
             usoCFDI.setRegimenFiscalReceptor(cUsoCFDI.getRegimenFiscalReceptor());
             usoCFDI.setFisica(cUsoCFDI.getFisica());
