@@ -25,7 +25,7 @@ public class c_Impuesto {
     //@GeneratedValue(strategy = GenerationType.AUTO)
     //@GeneratedValue(generator="system-uuid")
     //@GenericGenerator(name="system-uuid", strategy = "uuid")
-    private String cImpuesto;
+    private String id;
     @Column
     private String descripcion;
     @Column

@@ -64,6 +64,7 @@ public class c_ImpuestoController {
         
         if(impuestoData.isPresent()){
             c_Impuesto impuesto =  impuestoData.get();
+            impuesto.setId(cImpuesto.getId());
             impuesto.setDescripcion(cImpuesto.getDescripcion());
             impuesto.setRetencion(cImpuesto.getRetencion());
             impuesto.setTraslado(cImpuesto.getTraslado());

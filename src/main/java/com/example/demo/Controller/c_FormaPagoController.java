@@ -59,7 +59,7 @@ public class c_FormaPagoController {
         
         if(formaPagoData.isPresent()){
             c_FormaPago formaPago = formaPagoData.get();
-            formaPago.setCFormaPago(cFormaPago.getCFormaPago());
+            formaPago.setId(cFormaPago.getId());
             formaPago.setBancarizado(cFormaPago.getBancarizado());
             formaPago.setNombreBancoEmisorExtranjero(cFormaPago.getNombreBancoEmisorExtranjero());
             formaPago.setDescripcion(cFormaPago.getDescripcion());

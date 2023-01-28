@@ -38,3 +38,4 @@ public class c_TasaoCuota {
     @Column
     private Boolean status;
 }
+   

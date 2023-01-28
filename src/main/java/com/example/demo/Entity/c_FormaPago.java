@@ -20,7 +20,7 @@ import lombok.Setter;
 public class c_FormaPago {
     @Id
     // @GeneratedValue(strategy = GenerationType.AUTO)
-    private String cFormaPago;
+    private String id;
     @Column
     private String descripcion;
     @Column

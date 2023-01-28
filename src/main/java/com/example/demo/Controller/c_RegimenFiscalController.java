@@ -58,7 +58,7 @@ public class c_RegimenFiscalController {
         
         if(regimenFData.isPresent()){
             c_RegimenFiscal regimenFiscal = regimenFData.get();
-            regimenFiscal.setCRegimenFiscal(cRegimenF.getCRegimenFiscal());
+            regimenFiscal.setId(cRegimenF.getId());
             regimenFiscal.setDescripcion(cRegimenF.getDescripcion());
             regimenFiscal.setFisica(cRegimenF.getFisica());
             regimenFiscal.setMoral(cRegimenF.getMoral());

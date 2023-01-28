@@ -43,7 +43,7 @@ public class c_TasaoCuotaController {
     }
 
     @DeleteMapping("/{ctasacuota}")
-    public ResponseEntity<HttpStatus> deleteRegistro(@PathVariable("ctasacuota") String ctasacuota ) {
+    public ResponseEntity<HttpStatus> deleteRegistro(@PathVariable("ctasacuota") Integer ctasacuota ) {
         try {
             tasaocuotaRepository.deleteById(ctasacuota);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -53,7 +53,7 @@ public class c_TasaoCuotaController {
     }
 
     @PutMapping("/{ctasacuota}")
-    public ResponseEntity<c_TasaoCuota> updatingRegistro(@PathVariable("ctasacuota") String idTasaCuota, @RequestBody c_TasaoCuota cTasaoCuota){
+    public ResponseEntity<c_TasaoCuota> updatingRegistro(@PathVariable("ctasacuota") Integer idTasaCuota, @RequestBody c_TasaoCuota cTasaoCuota){
         Optional<c_TasaoCuota> tasacuotaData = tasaocuotaRepository.findById(idTasaCuota);
         
         if(tasacuotaData.isPresent()){

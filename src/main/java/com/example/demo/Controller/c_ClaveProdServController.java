@@ -58,7 +58,7 @@ public class c_ClaveProdServController {
         
         if(clavePSData.isPresent()){
             c_ClaveProdServ claveProdServ =  clavePSData.get();
-            claveProdServ.setCClaveProdServ(cClavePS.getCClaveProdServ());
+            claveProdServ.setId(cClavePS.getId());
             claveProdServ.setDescripcion(cClavePS.getDescripcion());
             claveProdServ.setPalabrasSimilares(cClavePS.getPalabrasSimilares());
             claveProdServ.setStatus(cClavePS.getStatus());
