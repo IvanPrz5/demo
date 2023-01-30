@@ -33,6 +33,11 @@ public class c_NumPedAduanaController {
         return (List<c_NumPedimentoAduana>) numpedaduanaRepository.findAll();
     }
 
+    @GetMapping(value = "/{id}")
+    public Optional<c_NumPedimentoAduana> data(@PathVariable("id") Integer id) {
+        return numpedaduanaRepository.findById(id);
+    }
+
     @PostMapping
     public ResponseEntity<c_NumPedimentoAduana> createRegistro(@RequestBody c_NumPedimentoAduana var) {
         try {
@@ -44,7 +49,7 @@ public class c_NumPedAduanaController {
     }
 
     @DeleteMapping("/{cnumpedaduana}")
-    public ResponseEntity<HttpStatus> deleteRegistro(@PathVariable("cnumpedaduana") String cnumpedaduana) {
+    public ResponseEntity<HttpStatus> deleteRegistro(@PathVariable("cnumpedaduana") Integer cnumpedaduana) {
         try {
             numpedaduanaRepository.deleteById(cnumpedaduana);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -54,7 +59,7 @@ public class c_NumPedAduanaController {
     }
 
     @PutMapping("/{cnumpedaduana}")
-    public ResponseEntity<c_NumPedimentoAduana> updatingRegistro(@PathVariable("cnumpedaduana") String idNPAduna, @RequestBody c_NumPedimentoAduana cNPAduana){
+    public ResponseEntity<c_NumPedimentoAduana> updatingRegistro(@PathVariable("cnumpedaduana") Integer idNPAduna, @RequestBody c_NumPedimentoAduana cNPAduana){
         Optional<c_NumPedimentoAduana> npAduanaData = numpedaduanaRepository.findById(idNPAduna);
         
         if(npAduanaData.isPresent()){

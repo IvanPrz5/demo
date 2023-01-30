@@ -19,7 +19,7 @@ import lombok.Setter;
 @Table(name="numPedimentoAduana")
 public class c_NumPedimentoAduana {
     @Id
-    // @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idNum;
     @Column
     private String cAduana;

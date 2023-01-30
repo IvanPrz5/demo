@@ -32,7 +32,7 @@ public class c_Estado {
     private Boolean status;
     
     @ManyToOne
-    @JoinColumn(name="c_pais")
+    @JoinColumn(name="id")
     private c_Pais pais;
 
     /* @OneToMany(mappedBy = "cLocalidad")
