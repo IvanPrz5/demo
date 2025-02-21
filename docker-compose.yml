@@ -1,0 +1,52 @@
+services:
+  spring-boot-app:
+    image: maven:3.8.4-openjdk-17
+    container_name: spring-boot-container
+    ports:
+      - "8585:8585"
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: [ "mvn", "spring-boot:run" ]
+    networks:
+      - mi-red
+    environment:
+      - TZ=America/Mexico_City
+
+  # Opción 2: Tomcat con el WAR generado
+  tomcat:
+    image: tomcat:10.1
+    container_name: tomcat-container
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./target/demo.war:/usr/local/tomcat/webapps/demo.war
+    environment:
+      - TZ=America/Mexico_City
+    networks:
+      - mi-red
+    depends_on:
+      - postgres
+
+  # PostgreSQL Service
+  postgres:
+    image: postgres:17
+    container_name: postgres-db-container
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=demo
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Qazxsw2.Po
+    networks:
+      - mi-red
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+networks:
+  mi-red: {}
+
+volumes:
+  postgres-data:
+    driver: local
